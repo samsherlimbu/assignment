@@ -10,3 +10,15 @@ console.log(z)
 const a = 10
 const b = '10'
 console.log(a===b)
+
+// generate a random number between 0 and 5, if it is lesser than 3,
+//console.log "lesser than 3" else "Greater"
+
+const random = Math.floor(Math.random()*6);
+if(random < 3){
+    console.log('lesser than 3')
+}else if(random === 3){
+    console.log('Equal to 3')
+}else{
+    console.log('greater than 3')
+}
