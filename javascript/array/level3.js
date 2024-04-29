@@ -5,6 +5,6 @@ arr.reduce((acc,curr)=>{
     if(curr%2 !== 0){
         return acc + curr
     }
-    console.log(acc)
+    return acc;
 },0)
 
