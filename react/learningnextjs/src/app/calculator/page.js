@@ -81,9 +81,9 @@ const Calculator = () => {
         </div>
         <div className="flex px-5">
         <div className=" flex-col mt-6 space-y-4 px-2">{generateDigits()}</div>
-        <div className=" flex-col justify-center items-center p-4">
+        {num !== "" && <div className=" flex-col justify-center items-center p-4">
           {action()}
-        </div>
+        </div>}
         </div>
         
       </div>
