@@ -1,11 +1,17 @@
 import React from "react";
-import { Input } from "@nextui-org/react";
+import { Input, link } from "@nextui-org/react";
+import Newbar from "../components/navbar/page";
+import Link from "next/link";
+
+
+
 
 const login = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 bg-slate-200">
-      <div className="w-full bg-slate-400 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-        <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+    <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 bg-sky-100">
+      <Newbar/>
+      <div className="w-full bg-sky-300 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 mt-5">
+        <div className="p-6 space-y-4 md:space-y-6 sm:p-8 mt-4">
           <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
             Sign in to your account
           </h1>
@@ -69,12 +75,12 @@ const login = () => {
             </button>
             <p className="text-sm font-light text-black dark:text-gray-400">
               Don’t have an account yet?{" "}
-              <a
-                href="#"
+              <Link
+                href="/register"
                 className="font-medium text-primary-600 hover:underline dark:text-primary-500"
               >
                 Sign up
-              </a>
+              </Link>
             </p>
           </form>
         </div>
