@@ -10,13 +10,15 @@ const page = () => {
     const [reactionDivOpen, setReactionDivOpen]= useState(false)
 
 
-    const changeReaction =(newReaction)=>{
+    const changeReaction =(newReaction,newColor)=>{
       setReaction(newReaction)
-      setColor('skyblue');
-      if(reaction === 'like'){
+      debugger
+      if(reaction === newReaction && color === newColor){
         setColor('grey')
-      }else{
-        setColor('skyblue')
+        setReaction('like')
+      }
+      else{
+        setColor(newColor)
       }
     }
 
@@ -24,10 +26,10 @@ const page = () => {
     return (
       <div className='border border-gray-200 shadow-lg w-32'>
         <button  className=' p-2 '>
-            <GrLike onClick={()=> changeReaction('like')} color="skyblue"/>
+            <GrLike onClick={()=> changeReaction('like','skyblue')} color="skyblue"/>
         </button>
         <button  className=' p-2 '>
-            <FaHeart  onClick={()=> changeReaction('love')} color="crimson"/>
+            <FaHeart  onClick={()=> changeReaction('love' )} color="crimson"/>
         </button>
         <button  className=' p-2 '>
             <FaRegFaceLaughSquint onClick={()=> changeReaction('haha')} color="orange"/>
