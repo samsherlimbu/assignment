@@ -1,6 +1,5 @@
 import React from "react";
 import { Input } from "@nextui-org/react";
-import Newbar from "../components/navbar/page";
 import Link from "next/link";
 
 
@@ -9,7 +8,6 @@ import Link from "next/link";
 const page = () => {
   return (
     <div className="flex flex-col items-center justify-center px-8 py-8 mx-auto md:h-screen lg:py-0 bg-sky-100">
-        <Newbar />
       <div className="w-full bg-sky-300 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
           <h1 className="items-center text-xl font-bold justify-center leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">Create your account</h1>
